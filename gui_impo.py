@@ -355,15 +355,15 @@ class MainApp(QMainWindow, ui):
                    #  print("img write")
 
     def mail(self, stop_event):
-        sender = 'mail.abhayadev@gmail.com'
-        receivers = ['mail.devabhaya@gmail.com']
+        sender = 'mail.SENDEREXAMPLE@gmail.com'
+        receivers = ['mail.RECIVEREXAMPLE@gmail.com']
 
         message = "detect over speed" + self.best_candidate['plate'].upper()
 
         try:
             smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
             smtpObj.starttls()
-            smtpObj.login("mail.abhayadev@gmail.com", "abhayadev04864225426")
+            smtpObj.login("EXAMPLE@gmail.com","PASSWORD")
             smtpObj.sendmail(sender, receivers, message)
             print("Successfully sent email")
             smtpObj.quit()
